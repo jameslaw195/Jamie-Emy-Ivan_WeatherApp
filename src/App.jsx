@@ -3,9 +3,15 @@ import "./App.css";
 import Form from "./components/Form";
 
 function App() {
+  const [activities, setActivities] = useState([]);
+
+  function handleAddActivity(newActivity) {
+    setActivities([...activities, newActivity]);
+  }
+
   return (
     <>
-      <Form></Form>
+      <Form onAddActivity={handleAddActivity}></Form>
     </>
   );
 }

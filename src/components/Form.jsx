@@ -1,16 +1,18 @@
+import { uid } from "uid";
+
 export default function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const formData = {
+    const newActivity = {
+      id: uid(),
       name: event.target.elements.name.value,
       isForGoodWeather: event.target.elements.isForGoodWeather.checked,
     };
 
-    // onAddActivity(formData);
-
     event.target.reset();
     event.target.elements.name.focus();
+    onAddActivity(newActivity);
   }
 
   return (
