@@ -1,6 +1,20 @@
 export default function Form({ onAddActivity }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = {
+      name: event.target.elements.name.value,
+      isForGoodWeather: event.target.elements.isForGoodWeather.checked,
+    };
+
+    // onAddActivity(formData);
+
+    event.target.reset();
+    event.target.elements.name.focus();
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h1></h1>
       <label htmlFor="name">Name:</label>
       <input
@@ -10,8 +24,12 @@ export default function Form({ onAddActivity }) {
         placeholder="Write your activity ..."
       />
 
-      <label htmlFor="goodWeatherActivities">Good Weather Activity</label>
-      <input type="checkbox" name="goodWeatherActivities"></input>
+      <label htmlFor="isforGoodWeather">Good Weather Activity</label>
+      <input
+        type="checkbox"
+        name="isForGoodWeather"
+        id="isforGoodWeather"
+      ></input>
 
       <button type="submit">Submit</button>
     </form>
