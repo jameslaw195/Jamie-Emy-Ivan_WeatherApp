@@ -14,7 +14,6 @@ export default function Form({ onAddActivity }) {
     event.target.elements.name.focus();
     onAddActivity(newActivity);
   }
-
   return (
     <form onSubmit={handleSubmit}>
       <h1></h1>
