@@ -1,6 +1,6 @@
 .form {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-flow: column nowrap;
   border: 5px solid violet;
   font-size: medium;
