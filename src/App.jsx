@@ -4,6 +4,7 @@ import "./App.css";
 import Form from "./components/Form/Form";
 import List from "./components/List/List";
 import Header from "./components/Header/Header";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [isGoodWeather, setIsGoodWeather] = useState({});
@@ -42,6 +43,7 @@ function App() {
   });
   return (
     <main>
+      <Menu></Menu>
       <Header isGoodWeather={isGoodWeather}></Header>
       <List
         viewList={activities}
