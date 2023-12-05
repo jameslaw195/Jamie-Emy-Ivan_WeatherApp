@@ -1,5 +1,4 @@
 export default function List({ viewList, isGoodWeather }) {
-  console.log(isGoodWeather);
   return (
     <>
       {viewList.lenght === 0 ? (
