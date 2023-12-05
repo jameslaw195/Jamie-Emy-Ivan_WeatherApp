@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     async function fetchWeather() {
       const response = await fetch(
-        "https://example-apis.vercel.app/api/weather/rainforest"
+        "https://example-apis.vercel.app/api/weather"
       );
       const weatherData = await response.json();
 
