@@ -20,10 +20,14 @@ function App() {
 
       setIsGoodWeather(weatherData);
     }
-    fetchWeather();
-  }, []);
 
-  console.log(isGoodWeather.condition);
+    fetchWeather();
+    const interval = setInterval(() => {
+      fetchWeather();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   function handleAddActivity(newActivity) {
     setActivities([...activities, newActivity]);

@@ -1,8 +1,6 @@
 import "./List.css";
 
 export default function List({ viewList, isGoodWeather, onDeleteActivity }) {
-  console.log(isGoodWeather.isGoodWeather);
-
   return (
     <>
       {viewList.length === 0 ? (
