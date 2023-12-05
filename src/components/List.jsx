@@ -1,9 +1,10 @@
-export default function List({ viewList, isGoodWeather }) {
+export default function List({ viewList, isGoodWeather, onDeleteActivity }) {
   console.log(isGoodWeather.isGoodWeather);
+
   return (
     <>
       {viewList.length === 0 ? (
-        <h3>"No activities yet! Add an activity from below list"</h3>
+        <h3>"No activities yet! Add an activity with the form below"</h3>
       ) : (
         <h3>
           {isGoodWeather.isGoodWeather
@@ -18,7 +19,10 @@ export default function List({ viewList, isGoodWeather }) {
               activity.isForGoodWeather === isGoodWeather.isGoodWeather
           )
           .map((activity) => (
-            <li key={activity.id}>{activity.name}</li>
+            <li key={activity.id}>
+              {activity.name}
+              <button onClick={() => onDeleteActivity(activity.id)}>x</button>
+            </li>
           ))}
       </ul>
     </>
