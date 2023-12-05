@@ -9,6 +9,7 @@
 
 .form_button {
   background-color: yellow;
+  color: black;
   border: solid black;
   font: bold;
   margin-left: 30%;
@@ -18,6 +19,8 @@
 
 .input_activity {
   border: violet;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .activity_container {
