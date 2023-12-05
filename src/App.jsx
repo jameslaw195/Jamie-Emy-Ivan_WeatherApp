@@ -1,3 +1,8 @@
+function handleLocationChange(newLocation) {
+  console.log("newlocation", newLocation);
+  console.log("set", setLocation(newLocation));
+  setLocation(newLocation);
+}
 import { useState, useEffect } from "react";
 import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
@@ -8,6 +13,7 @@ import Menu from "./components/Menu/Menu";
 
 function App() {
   const [isGoodWeather, setIsGoodWeather] = useState({});
+  const [location, setLocation] = useState("");
   const [activities, setActivities] = useLocalStorageState("activities", {
     defaultValue: [],
   });
@@ -15,7 +21,7 @@ function App() {
   useEffect(() => {
     async function fetchWeather() {
       const response = await fetch(
-        "https://example-apis.vercel.app/api/weather"
+        `https://example-apis.vercel.app/api/weather/${location}`
       );
       const weatherData = await response.json();
 
@@ -28,7 +34,7 @@ function App() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [location]);
 
   function handleAddActivity(newActivity) {
     setActivities([...activities, newActivity]);
@@ -37,13 +43,12 @@ function App() {
   function handleDeleteActivity(id) {
     setActivities(activities.filter((activity) => activity.id !== id));
   }
-
-  const goodWeatherActivities = activities.filter((activity) => {
-    return activity.isForGoodWeather === isGoodWeather;
-  });
+  function handleLocationChange(newLocation) {
+    setLocation(newLocation);
+  }
   return (
     <main>
-      <Menu></Menu>
+      <Menu onLocationChange={handleLocationChange}></Menu>
       <Header isGoodWeather={isGoodWeather}></Header>
       <List
         viewList={activities}
