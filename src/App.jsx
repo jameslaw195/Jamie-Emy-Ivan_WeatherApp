@@ -21,7 +21,10 @@ function App() {
   return (
     <>
       {/* <List viewList={activities}></List> */}
-      <List viewList={goodWeatherActivities}></List>
+      <List
+        viewList={goodWeatherActivities}
+        isGoodWeather={isGoodWeather}
+      ></List>
 
       <Form onAddActivity={handleAddActivity}></Form>
     </>
