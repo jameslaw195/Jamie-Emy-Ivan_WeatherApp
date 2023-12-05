@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import useLocalStorageState from "use-local-storage-state";
 import "./App.css";
-import Form from "./components/Form";
-import List from "./components/List";
-import Header from "./components/Header";
+import Form from "./components/Form/Form";
+import List from "./components/List/List";
+import Header from "./components/Header/Header";
 
 function App() {
   const [isGoodWeather, setIsGoodWeather] = useState({});
@@ -37,7 +37,7 @@ function App() {
     return activity.isForGoodWeather === isGoodWeather;
   });
   return (
-    <>
+    <main>
       <Header isGoodWeather={isGoodWeather}></Header>
       <List
         viewList={activities}
@@ -46,7 +46,7 @@ function App() {
       ></List>
 
       <Form onAddActivity={handleAddActivity}></Form>
-    </>
+    </main>
   );
 }
 
