@@ -21,6 +21,7 @@ export default function Form({ onAddActivity }) {
       <div className="activity_container">
         <label htmlFor="name"></label>
         <input
+          required
           type="text"
           name="name"
           id="name"
