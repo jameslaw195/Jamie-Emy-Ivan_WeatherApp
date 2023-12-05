@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  /* justify-content: center; */
+  flex-flow: column nowrap;
+  border: 5px solid violet;
+  font-size: medium;
+  width: 400px;
+}
+
+.form_button {
+  background-color: yellow;
+  border: solid black;
+  font: bold;
+  margin-left: 30%;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+.input_activity {
+  border: violet;
+}
+
+.activity_container {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto 5px;
+}
+
+.weather_checkbox_container {
+  display: flex;
+  flex-direction: row;
+  margin: 5px auto 10px;
+}
