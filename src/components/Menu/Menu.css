@@ -1,6 +1,7 @@
 .menu-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
   list-style-type: none;
   margin: 0;
   padding: 0;
