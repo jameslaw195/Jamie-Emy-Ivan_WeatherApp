@@ -15,7 +15,7 @@
   border: solid black;
   font: bold;
   margin-bottom: 10px;
-  max-width: fit-content;
+  max-width: max-content;
 }
 
 .input_activity {

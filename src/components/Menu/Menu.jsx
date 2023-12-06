@@ -5,7 +5,7 @@ export default function Menu({ onLocationChange }) {
   };
 
   return (
-    <ul>
+    <ul className="menu-list">
       <li>
         <a href="#" onClick={() => handleClick("europe")}>
           Europe

@@ -10,15 +10,14 @@
 
 .list-item-container {
   display: flex;
-
   list-style-type: none;
-
   border-radius: 8px;
   padding: 5px;
   background-color: grey;
   align-items: center;
   gap: 10px;
 }
+
 button {
   border-radius: 8px;
   color: white;
