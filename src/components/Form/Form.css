@@ -1,20 +1,21 @@
 .form {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column nowrap;
   border: 5px solid violet;
   font-size: medium;
-  width: 400px;
+  max-width: 1200px;
 }
 
 .form_button {
   background-color: yellow;
+  text-align: center;
   color: black;
   border: solid black;
   font: bold;
-  margin-left: 30%;
   margin-bottom: 10px;
-  width: 40%;
+  max-width: fit-content;
 }
 
 .input_activity {
